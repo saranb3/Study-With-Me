@@ -1,0 +1,133 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+/* Arrange elements in a vertical stack */
+    align-items: center;
+    /* Keep content centered horizontally */
+    height: 100vh;
+    background-color: #88BF96;
+    font-family: "Press Start 2P", sans-serif;
+    justify-content: flex-start;
+    padding: 0;
+ }
+
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Aligns "ZEN" left & buttons right */
+    align-items: center; /* Centers items vertically */
+    padding: 35px 10px 13px; /*20 top, left right = 20, bottom = 10 */ 
+
+}
+
+.header-container h1 {
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: #FFF;
+    text-transform: uppercase;
+    padding-left: 30px; /* Moves "ZEN" to the right */
+}
+
+.window-controls {
+    display: flex;
+    gap: 15px; /* Spacing between buttons */
+    padding-right: 30px;
+    
+}
+
+.window-controls img {
+    width: 40px;
+    cursor: pointer;
+    height:auto; 
+    image-rendering: pixelated;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.start-container{ 
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#FCF1DF; 
+    padding: 10px;
+    width: 420px;
+    height: 450px;
+    max-width: 500px;
+    border: 8px solid rgba(86, 142, 114, 1); 
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.start-container img { 
+    image-rendering: pixelated;
+    height: auto; 
+    width: 60%;
+    object-fit: contain;
+    margin: auto;
+    display:  block;
+    padding-top: 10px;
+}
+
+.start-container p {
+    font-size: 17px;
+    /* Adjust text size */
+    font-weight: bold;
+    /* Makes text bold */
+    color: #333;
+    /* Darker text color */
+    text-align: center;
+    /* Centers text */
+    letter-spacing: 0.5px;
+    /* Adds spacing between letters */
+    line-height: 1.0;
+    /* Adjusts space between lines */
+    /* Adds space below */
+    margin-top: 20px;
+    margin-bottom: 10px;
+        /* Closer to the button */
+}
+
+#start-button {
+    margin-top: 10px;
+    width: 80%; 
+    background-color: #C8E0A6;
+    /* Soft green */
+    border: 2px solid #476A4D;
+    /* Dark green border */
+    color: #333;
+    /* Text color */
+    padding: 10px 5px;
+    /* Space inside the button */
+    font-size: 20px;
+    /* Text size */
+    font-weight: bold;
+    font-family: "Press Start 2P", sans-serif;
+    /* Matches your app's font */
+    text-transform: uppercase;
+    cursor: pointer;
+    /* Changes cursor to pointer on hover */
+    border-radius: 10px;
+    /* Rounded corners */
+    display: block;
+    margin: 10px auto;
+    /* Centers the button */
+    box-shadow: 3px 3px 0px #476A4D;
+    /* Adds a 3D effect */
+    transition: all 0.2s ease-in-out;
+    /* Smooth hover effect */
+}
