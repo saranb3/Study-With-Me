@@ -36,10 +36,6 @@
     animation: bounce-scale 0.8s ease-in-out infinite;
 }
 
-.timer-page #start-button:hover{ 
-    animation: bounce-scale-timer 1s ease-in-out infinite;
-}
-
 .window-controls img[alt="Minimize"]:hover {
     animation: bounce-scale 0.6s ease-in-out infinite;
 }
@@ -227,13 +223,10 @@ body {
 /* Style for active mode buttons */
 .timer-mode-buttons button.active {
     color: #2f4732;
-    /* Darker green color */
-    /* Underline the text */
     font-weight: bold;
     /* Make the text bold */
     background-color: #d8eed9;
     /* Light background highlight */
-    /* You can adjust any of these properties to match your design */
 
 }
 .timer-mode-buttons button {
