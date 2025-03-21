@@ -25,26 +25,11 @@ A retro-styled, pixel-art inspired Pomodoro timer application designed to boost 
 6. When the timer finishes, you'll receive an alert notification
 7. The app automatically tracks your completed Pomodoro sessions
 
-## Installation Options
-
-### Option 1: Desktop Application
-1. Download the latest release for your operating system:
-   - Windows (.exe)
-   - macOS (.dmg)
-   - Linux (AppImage or .deb)
-2. Run the installer and follow the prompts
-3. Launch the "Study With Me" application
-
-### Option 2: Direct Web Files
-1. Download the ZIP file containing all the web files
-2. Extract all files to a folder on your computer
-3. Open `index.html` in your web browser
-
-### Option 3: From Source Code
+## Installation
 1. Clone the repository: `git clone https://github.com/yourusername/study-with-me.git`
 2. Install dependencies: `npm install`
 3. For web version: open `index.html` in your browser
-4. For desktop version: run `npm start` to launch the Electron app
+4. For desktop version: run `npm run start` to launch the Electron app
 5. Build desktop versions: `npm run make` to create platform-specific packages
 
 ## Technical Details
