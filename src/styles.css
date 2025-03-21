@@ -220,6 +220,20 @@ body {
     gap: 3px; 
     justify-content: center;
     width: 100%; 
+}
+
+
+
+/* Style for active mode buttons */
+.timer-mode-buttons button.active {
+    color: #2f4732;
+    /* Darker green color */
+    /* Underline the text */
+    font-weight: bold;
+    /* Make the text bold */
+    background-color: #d8eed9;
+    /* Light background highlight */
+    /* You can adjust any of these properties to match your design */
 
 }
 .timer-mode-buttons button {
