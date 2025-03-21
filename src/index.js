@@ -2,7 +2,6 @@ const {app, BrowserWindow} = require('electron');
 const path = require('path');
 const { ipcMain } = require('electron');
 
-
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
   app.quit();
@@ -14,14 +13,14 @@ const createWindow = () => {
     width: 500,
     height: 600,
     resizable: true,
+    // Add the icon here in the existing createWindow function
+    icon: path.join(__dirname, '../assets/icon' + (process.platform === 'win32' ? '.ico' : process.platform === 'darwin' ? '.icns' : '.png')),
     webPreferences: { 
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: false,
       contextIsolation: true,
       enableRemoteModule: false,
     }
-
-    
   });
 
   // and load the index.html of the app.
@@ -39,7 +38,6 @@ const createWindow = () => {
       app.quit(); 
     }
   });
-
 };
 
 // This method will be called when Electron has finished
@@ -66,6 +64,5 @@ app.on('window-all-closed', () => {
   }
 });
 
-
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and import them here.
+// Remove this second BrowserWindow creation - it's causing the error
+// const mainWindow = new BrowserWindow({...});

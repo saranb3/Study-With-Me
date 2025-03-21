@@ -11,6 +11,36 @@
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\""
   },
+  "config": {
+  "forge": {
+    "packagerConfig": {
+      "icon": "./assets/icon"
+    },
+    "makers": [
+      {
+        "name": "@electron-forge/maker-squirrel",
+        "config": {
+          "name": "study_me",
+          "setupIcon": "./assets/icon.ico"
+        }
+      },
+      {
+        "name": "@electron-forge/maker-zip",
+        "platforms": [
+          "darwin"
+        ]
+      },
+      {
+        "name": "@electron-forge/maker-deb",
+        "config": {}
+      },
+      {
+        "name": "@electron-forge/maker-rpm",
+        "config": {}
+      }
+    ]
+  }
+},
   "devDependencies": {
     "@electron-forge/cli": "^7.6.1",
     "@electron-forge/maker-deb": "^7.6.1",
