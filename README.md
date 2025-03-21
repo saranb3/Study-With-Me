@@ -1,79 +1,140 @@
-# Pomodoro Timer Web Application
+# Study With Me - Pomodoro Timer Application
 
-A simple, easy-to-use Pomodoro timer web application to boost productivity and manage work sessions effectively.
+A retro-styled, pixel-art inspired Pomodoro timer application designed to boost productivity and manage study sessions efficiently.
 
-## Overview
-
-This Pomodoro Timer helps you implement the Pomodoro Technique, a time management method that uses timed intervals of work followed by short breaks. The application features:
-
-- 25-minute Pomodoro work sessions
-- 5-minute short breaks
-- 30-minute long breaks
-- Session counter to track completed Pomodoros
-- Motivational messages to keep you encouraged
-
-## How to Use
-
-1. Choose your timer mode:
-   - **Pomodoro**: 25-minute focused work session
-   - **Short Break**: 5-minute break
-   - **Long Break**: 30-minute break (recommended after 4 Pomodoros)
-
-2. Click the START button to begin the timer.
-
-3. Focus on your task until the timer completes.
-
-4. When the timer finishes, you'll receive an alert notification.
-
-5. The app will automatically keep track of your completed Pomodoro sessions.
+![Study With Me App](images/Clover_pixel.png)
 
 ## Features
 
-- **Visual Indicators**: Active button highlighting shows your current mode
-- **Timer Controls**: Start/pause functionality
-- **Session Tracking**: Counts completed Pomodoro sessions
-- **Motivational Messages**: Random encouraging messages display after each completed Pomodoro
-- **Responsive Design**: Works on desktop and mobile devices
+- **Pomodoro Timer**: 25-minute focused work sessions
+- **Short Break**: 5-minute short breaks
+- **Long Break**: 30-minute extended breaks
+- **Session Counter**: Tracks completed Pomodoro sessions
+- **Motivational Messages**: Random encouraging quotes after each completed Pomodoro
+- **Pixel Art Design**: Retro-inspired interface with animations
+- **Desktop Application**: Built with Electron for cross-platform compatibility
 
-## Technical Implementation
+## How to Use
 
-The application is built using vanilla JavaScript, HTML, and CSS with the following components:
+1. Launch the application
+2. Click the START button on the home screen
+3. Choose your timer mode:
+   - **Pomodoro**: 25-minute focused work session
+   - **Short Break**: 5-minute break
+   - **Long Break**: 30-minute break (recommended after 4 Pomodoros)
+4. Click START to begin the timer
+5. Focus on your task until the timer completes
+6. When the timer finishes, you'll receive an alert notification
+7. The app automatically tracks your completed Pomodoro sessions
 
-- **Timer Logic**: Implemented using JavaScript's `setInterval` for precise timing
-- **UI Updates**: Dynamic content updates without page reloads
-- **State Management**: Tracks the current mode and session count
+## Installation Options
 
-## Installation
+### Option 1: Desktop Application
+1. Download the latest release for your operating system:
+   - Windows (.exe)
+   - macOS (.dmg)
+   - Linux (AppImage or .deb)
+2. Run the installer and follow the prompts
+3. Launch the "Study With Me" application
 
-1. Clone or download this repository
-2. Open `index.html` in your web browser
-3. No additional dependencies or installations required
+### Option 2: Direct Web Files
+1. Download the ZIP file containing all the web files
+2. Extract all files to a folder on your computer
+3. Open `index.html` in your web browser
 
-## File Structure
+### Option 3: From Source Code
+1. Clone the repository: `git clone https://github.com/yourusername/study-with-me.git`
+2. Install dependencies: `npm install`
+3. For web version: open `index.html` in your browser
+4. For desktop version: run `npm start` to launch the Electron app
+5. Build desktop versions: `npm run make` to create platform-specific packages
 
+## Technical Details
+
+### File Structure
 ```
-├── index.html           # Main navigation page
-├── timer.html           # Timer interface
-├── timer.js             # Timer functionality
-├── styles.css           # Styling for the application
-└── README.md            # This documentation
+├── src/
+│   ├── index.js          # Electron main process
+│   ├── index.html        # Main landing page
+│   ├── timer.html        # Timer interface
+│   ├── timer.js          # Timer functionality
+│   ├── render.js         # Main page event handlers
+│   ├── preload.js        # Electron preload script
+│   └── styles.css        # Application styling
+├── assets/
+│   ├── icon.ico          # Windows application icon
+│   ├── icon.icns         # macOS application icon
+│   ├── icon.png          # Linux application icon
+│   ├── Clover_pixel.png  # App logo
+│   ├── Minimize.png      # UI element
+│   └── Close.png         # UI element
+├── package.json          # Project configuration
+└── README.md             # Documentation
 ```
+
+### Technologies Used
+- **HTML/CSS/JavaScript**: Core web technologies
+- **Electron**: For desktop application packaging
+- **Google Fonts**: "Press Start 2P" and "Pixelify Sans" for retro styling
+- **CSS Animations**: For interactive button effects
+
+### Timer Implementation
+The timer uses JavaScript's `setInterval` function to create a countdown that:
+- Updates every second
+- Switches between different modes (Pomodoro, short break, long break)
+- Provides visual feedback on the current state
+- Tracks completed sessions
+- Displays motivational messages
 
 ## The Pomodoro Technique
 
 The Pomodoro Technique was developed by Francesco Cirillo in the late 1980s and consists of the following steps:
 
-1. Decide on a task to be done
-2. Set the timer to 25 minutes (one Pomodoro)
+1. Choose a task to work on
+2. Set the timer for 25 minutes (one Pomodoro)
 3. Work on the task until the timer rings
 4. Take a short break (5 minutes)
 5. After four Pomodoros, take a longer break (15-30 minutes)
 
-This technique helps improve focus, manage distractions, and maintain mental freshness.
+This technique helps improve focus, manage distractions, and maintain mental freshness by breaking work into manageable intervals.
 
-## Browser Compatibility
+## Customization
 
-This application is compatible with all modern browsers including:
+You can customize the application by modifying:
+- Timer durations in `timer.js`
+- Motivational messages in the `motivations` array
+- Visual styling in `styles.css`
+- Font choices in the HTML files
+
+## Building from Source
+
+To build the application:
+
+1. Ensure you have Node.js installed
+2. Clone the repository
+3. Install dependencies:
+   ```
+   npm install
+   ```
+4. Start the development version:
+   ```
+   npm start
+   ```
+5. Build platform-specific packages:
+   ```
+   npm run make
+   ```
+   This will create platform-specific installers in the `out` directory
+
+## System Requirements
+
+### Desktop App
+- **Windows**: Windows 10 or later
+- **macOS**: macOS 10.13 or later
+- **Linux**: Ubuntu 18.04 or other modern Linux distribution
+
+### Web Version
+Compatible with all modern browsers including:
 - Chrome
 - Firefox
 - Safari
@@ -81,8 +142,12 @@ This application is compatible with all modern browsers including:
 
 ## License
 
-This project is open source and available for personal and educational use.
+This project is open source and available under the MIT License.
 
 ## Feedback and Contributions
 
-Feedback and contributions are welcome! Feel free to fork the repository and submit pull requests.
+Feedback and contributions are welcome! Feel free to fork the repository, submit issues, or create pull requests.
+
+---
+
+Created by Mighty Burapachaisri
