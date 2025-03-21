@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+
 @keyframes bounce-scale {
 
     0%,
@@ -17,8 +18,26 @@
     }
 }
 
-#start-button:hover {
-    animation: bounce-scale 0.5s ease-in-out infinite;
+@keyframes bounce-scale-timer {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-.5px) scale(1.05);
+    }
+}
+
+
+
+.home-page #start-button:hover {
+    animation: bounce-scale 0.8s ease-in-out infinite;
+}
+
+.timer-page #start-button:hover{ 
+    animation: bounce-scale-timer 1s ease-in-out infinite;
 }
 
 .window-controls img[alt="Minimize"]:hover {
@@ -43,7 +62,7 @@ body {
     justify-content: flex-start;
     padding: 0;
  }
-
+/* main screen */
 .header-container {
     width: 100%;
     display: flex;
@@ -108,6 +127,7 @@ body {
     margin: auto;
     display:  block;
     padding-top: 10px;
+    border: none; 
 }
 
 .start-container p {
@@ -129,7 +149,7 @@ body {
         /* Closer to the button */
 }
 
-#start-button {
+.home-page #start-button {
     margin-top: 10px;
     width: 80%; 
     background-color: #C8E0A6;
@@ -159,3 +179,132 @@ body {
     /* Smooth hover effect */
 }
 
+/* timer screen */
+
+.timer-container {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FCF1DF;
+    padding: 10px;
+    width: 420px;
+    height: 450px;
+    max-width: 500px;
+    border: 8px solid rgba(86, 142, 114, 1);
+    box-sizing: border-box;
+    flex-shrink: 0;
+    position: relative; /*this creates a relative coordinate system*/
+}
+#back-button{ /*this selects by id*/ 
+    position: absolute; 
+    top: 5%;
+    right: 20px; 
+    background: transparent; 
+    border: none; 
+    font-family: "Press Start 2P", sans-serif; 
+    color: #538176;
+    font-size: 16px;
+    cursor: pointer; 
+    letter-spacing: 2px;
+}
+
+.timer-mode-buttons{ 
+    position: absolute; 
+    top: 18%;
+    left: 50%; 
+    transform: translateX(-50%);
+
+    /* layout for the buttons inside */
+    display: flex; 
+    gap: 3px; 
+    justify-content: center;
+    width: 100%; 
+
+}
+.timer-mode-buttons button {
+    background: transparent;
+    border: none;
+    font-family: "Press Start 2P", sans-serif;
+    color: #476A4D;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#timer-display{
+    position: absolute; 
+    top: 25%; 
+    left: 50%; 
+    transform: translateX(-50%);
+        /* Centers horizontally */
+    padding: 35px 0; 
+    border: 5px solid #509881;
+    background: #aee6bc;
+    border-radius:15px;
+    width: 80%; 
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 60px;
+    color: #336f3d;
+    text-align: center;
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.timer-page #start-button {
+    /* positioning */
+    position: absolute;
+    top: 61%;
+    left: 50%; 
+    transform: translateX(-50%);
+    
+
+    /* appearance */
+    width: 80%;
+    background-color: #C8E0A6;
+    /* Soft green */
+    border: 2px solid #476A4D;
+    /* Dark green border */
+    color: #333;
+    /* Text color */
+    padding: 10px 5px;
+    /* Space inside the button */
+    font-size: 20px;
+    /* Text size */
+    font-weight: bold;
+    font-family: "Press Start 2P", sans-serif;
+    /* Matches your app's font */
+    text-transform: uppercase;
+    cursor: pointer;
+    /* Changes cursor to pointer on hover */
+    border-radius: 10px;
+    /* Centers the button */
+    box-shadow: 3px 3px 0px #476A4D;
+    /* Adds a 3D effect */
+    transition: all 0.2s ease-in-out;
+    /* Smooth hover effect */
+   
+}
+
+.motivation-text {
+    position: absolute;
+    bottom: 10%;
+    /* Position it near the bottom of the container */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+}
+
+#motivation {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 18px;
+    color: #1e1e1e;
+    margin-bottom: 8px;
+}
+
+#count {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 18px;
+    color: #1e1e1e;
+}
