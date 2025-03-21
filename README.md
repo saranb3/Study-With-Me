@@ -2,8 +2,6 @@
 
 A retro-styled, pixel-art inspired Pomodoro timer application designed to boost productivity and manage study sessions efficiently.
 
-![Study With Me App](images/Clover_pixel.png)
-
 ## Features
 
 - **Pomodoro Timer**: 25-minute focused work sessions
