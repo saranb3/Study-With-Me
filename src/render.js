@@ -9,6 +9,13 @@ document.addEventListener('DOMContentLoaded', () => { //sets up an event listene
 
     }); 
 
+    const backButton = document.getElementById('back-button'); 
+    backButton.addEventListener('click', () => { 
+        window.location.href = 'index.html';
+    })
+
+
+
     //Minimize and Close buttons 
     // the query selector finds an image element with an image element with the alt attribute 'Minimize' inside an element with the class with class 'window-controls'
     const minimizeButton = document.querySelector('.window-controls img[alt="Minimize"]'); 

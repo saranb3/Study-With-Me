@@ -13,7 +13,7 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 500,
     height: 600,
-    resizable: false,
+    resizable: true,
     webPreferences: { 
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: false,
@@ -26,6 +26,7 @@ const createWindow = () => {
 
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
+  mainWindow.setAspectRatio(5 / 6);
 
   // Open the DevTools
   ipcMain.on('minimize-window', () => {
@@ -64,7 +65,6 @@ app.on('window-all-closed', () => {
     app.quit();
   }
 });
-
 
 
 // In this file you can include the rest of your app's specific main process
