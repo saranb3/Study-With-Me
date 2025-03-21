@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start the timer
     function startTimer() {
         console.log("Starting timer");
-        isRunning = true;
-        startButton.textContent = 'PAUSE';
+        isRunning = true; //timer is on 
+        startButton.textContent = 'PAUSE'; //start button is pressed 
         
         // Clear any existing interval to avoid multiple timers
         if (timerInterval) {
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // Update pomodoro count and motivation if we completed a pomodoro
                 if (currentMode === 'pomodoro') {
-                    pomodoroCount++;
+                    pomodoroCount++;    
                     countText.textContent = `Pomodoro Count: #${pomodoroCount}`;
                     
                     // Update motivation text
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 
                 // Reset the timer to its original duration based on current mode
-                switch(currentMode) {
+                switch(currentMode) {   
                     case 'pomodoro':
                         timeLeft = 25 * 60; // Reset to 25 minutes
                         break;
