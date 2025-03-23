@@ -12,6 +12,37 @@ document.addEventListener('DOMContentLoaded', () => {
     // Log to confirm elements are found
     console.log("Timer display found:", timerDisplay);
     console.log("Start button found:", startButton);
+
+     // Window control buttons
+    const minimizeButton = document.querySelector('.window-controls img[alt="Minimize"]');
+    const closeButton = document.querySelector('.window-controls img[alt="Close"]');
+    
+    console.log('Minimize button found:', !!minimizeButton);
+    console.log('Close button found:', !!closeButton);
+    console.log('electronAPI available:', !!window.electronAPI);
+    
+    if (minimizeButton) {
+        minimizeButton.addEventListener('click', () => {
+            console.log('Minimize button clicked');
+            if (window.electronAPI) {
+                window.electronAPI.minimizeWindow();
+            } else {
+                console.error('electronAPI not available');
+            }
+        });
+    }
+    
+    if (closeButton) {
+        closeButton.addEventListener('click', () => {
+            console.log('Close button clicked');
+            if (window.electronAPI) {
+                window.electronAPI.closeWindow();
+            } else {
+                console.error('electronAPI not available');
+            }
+        });
+    }
+    
     
     // Timer variables
     let currentMode = 'pomodoro';

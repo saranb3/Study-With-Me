@@ -9,29 +9,34 @@ document.addEventListener('DOMContentLoaded', () => { //sets up an event listene
 
     }); 
 
-    const backButton = document.getElementById('back-button'); 
-    backButton.addEventListener('click', () => { 
-        window.location.href = 'index.html';
-    })
-
-
-
     //Minimize and Close buttons 
     // the query selector finds an image element with an image element with the alt attribute 'Minimize' inside an element with the class with class 'window-controls'
-    const minimizeButton = document.querySelector('.window-controls img[alt="Minimize"]'); 
-    const closeButton = document.querySelector('.window-controls img[alt="Close"]'); 
-
-    if (minimizeButton) {  //if the minimize button is pressed (not null)
-        minimizeButton.addEventListener('click', () => { 
-            console.log("minimize button clicked")
-            window.electronAPI.minimizeWindow();  //minimize the window 
+    const minimizeButton = document.querySelector('.window-controls img[alt="Minimize"]');
+    const closeButton = document.querySelector('.window-controls img[alt="Close"]');
+    
+    console.log('Minimize button found:', !!minimizeButton);
+    console.log('Close button found:', !!closeButton);
+    console.log('electronAPI available:', !!window.electronAPI);
+    
+    if (minimizeButton) {
+        minimizeButton.addEventListener('click', () => {
+            console.log('Minimize button clicked');
+            if (window.electronAPI) {
+                window.electronAPI.minimizeWindow();
+            } else {
+                console.error('electronAPI not available');
+            }
         });
     }
-
-    if (closeButton){ //check if close button is clicked
-        closeButton.addEventListener('click', () => { 
-            console.log("close button clicked")
-             window.electronAPI.closeWindow();  //if click closes electron app 
+    
+    if (closeButton) {
+        closeButton.addEventListener('click', () => {
+            console.log('Close button clicked');
+            if (window.electronAPI) {
+                window.electronAPI.closeWindow();
+            } else {
+                console.error('electronAPI not available');
+            }
         });
     }
 
