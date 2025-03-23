@@ -12,7 +12,7 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 500,
     height: 600,
-    resizable: true,
+    resizable: false,
     // Add the icon here in the existing createWindow function
     icon: path.join(__dirname, '../assets/icon' + (process.platform === 'win32' ? '.ico' : process.platform === 'darwin' ? '.icns' : '.png')),
     webPreferences: { 
