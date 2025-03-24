@@ -26,16 +26,6 @@ A retro-styled, pixel-art inspired Pomodoro timer application designed to boost 
 7. The app automatically tracks your completed Pomodoro sessions
 
 ## Installation
-
-### Option 1: Download the Application
-1. Go to the [Releases](https://github.com/yourusername/study-with-me/releases) section on the right side of this repository
-2. Download the appropriate file for your operating system:
-   - Windows: `.exe` installer
-   - macOS: `.dmg` file
-   - Linux: `.AppImage` or `.deb` package
-3. Run the installer or application file
-
-### Option 2: Build from Source (For Developers)
 If you want to work on the open source project:
 1. Clone the repository: `git clone https://github.com/yourusername/study-with-me.git`
 2. Install dependencies: `npm install`
