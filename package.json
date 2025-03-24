@@ -1,6 +1,6 @@
 {
-  "name": "Study With Me!",
-  "productName": "study-me",
+  "name": "Study With Me",
+  "productName": "Study with Me",
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": "src/index.js",
