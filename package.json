@@ -1,5 +1,5 @@
 {
-  "name": "study-me",
+  "name": "Study With Me!",
   "productName": "study-me",
   "version": "1.0.0",
   "description": "My Electron application description",
@@ -61,4 +61,5 @@
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1"
   }
+  
 }
